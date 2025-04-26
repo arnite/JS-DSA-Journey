@@ -84,7 +84,7 @@ const result = numPrinter(100);
 console.log(result);
 */
 
-// Write a function that takes an array of numbers and returns a new array with only the numbers that are greater than 10 using filter().
+/* Write a function that takes an array of numbers and returns a new array with only the numbers that are greater than 10 using filter().
 
 function numChanger(arr) {
   const newArr = arr.filter((num) => num > 10);
@@ -94,3 +94,114 @@ function numChanger(arr) {
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16];
 const result = numChanger(array);
 console.log(result);
+*/
+
+/* Create an array of strings and use map() to return an array of string lengths.
+const stringBunch = ["mango", "length", "teacher", "doctor", "people", "sexy"];
+
+const stringlength = stringBunch.map((str)=> {
+  return `${str}: ${str.length}`
+})
+console.log(stringlength)
+*/
+
+/* Use reduce() to find the total sum of numbers in an array.
+const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const accumulated = num.reduce((acc, curr) => {
+  return acc + curr
+}, 0)
+console.log(accumulated)
+*/
+
+/* Write a function that accepts an object and logs all its keys and values using a for...in loop.
+const arnoldInfo = {
+  fullName: "Arnold Ogechukwu Udemba",
+  height: "5 ft 9 in",
+  siblings: ["ebube", "nonso", "nneoma"],
+  parents: ["Nwakaego", "Charles"],
+  age: 23,
+  bestFriend: "Daniel",
+  occupation: "Software Engineer",
+  Natonality: "Nigeria",
+  stateOfOrigin: "Imo State",
+};
+
+const obejectConv = (object) => {
+  let data = [];
+  for (let info in object) {
+    const stuffs = `${info}: ${object[info]}`;
+    data.push(stuffs);
+  }
+  return data;
+};
+
+const result = obejectConv(arnoldInfo);
+console.log(result);
+*/
+
+/* Create an object representing a person with nested address details. Access and log the city value.
+const arnoldInfo = {
+  fullName: "Arnold Ogechukwu Udemba",
+  height: "5 ft 9 in",
+  siblings: ["ebube", "nonso", "nneoma"],
+  parents: ["Nwakaego", "Charles"],
+  age: 23,
+  bestFriend: "Daniel",
+  occupation: "Software Engineer",
+  addressDetails: {
+    community: "ubahaneri",
+    city: "Ikeja",
+    state: "Lagos-state",
+    Nationality: "Nigeria",
+  },
+};
+
+const nneomaInfo = {
+  fullName: "Nneoma Marvis Udemba",
+  height: "unknown",
+  siblings: ["ebube", "nonso", "arnold"],
+  parents: ["Nwakaego", "Charles"],
+  age: 13,
+  bestFriend: "unknown",
+  occupation: "Student",
+  addressDetails: {
+    community: "umunachi",
+    city: "Oru-east",
+    state: "ebonyi-state",
+    Nationality: "Nigeria",
+  },
+};
+
+function addressExtractor(info) {
+  if (!info.addressDetails.city) {
+    return `Please include the "city" details under the "addressDetails"`;
+  }
+
+  return `City: ${info.addressDetails.city}`;
+}
+
+const arnoldAddressDetails = addressExtractor(arnoldInfo);
+const nneomaAddressInfo = addressExtractor(nneomaInfo);
+console.log(arnoldAddressDetails);
+console.log(nneomaAddressInfo);
+*/
+
+// Given an object, write a function that removes a specified property from the object and returns the updated object.
+function colorRemover(fruit) {
+  if (fruit.color) {
+    delete fruit.color;
+    return fruit;
+  }
+  return `No "color" indicated`;
+}
+
+const mangoDetails = {
+  color: "Green",
+  season: "April",
+  sweetness: "10/10",
+  weight: "0.3 kg",
+};
+
+const modifiedMango = colorRemover(mangoDetails);
+console.log(modifiedMango);
