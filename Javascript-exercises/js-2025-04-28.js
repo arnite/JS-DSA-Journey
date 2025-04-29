@@ -92,6 +92,7 @@ function fib(n) {
 console.log(fib(1));
 */
 
+/*
 function fib(n) {
   if (n <= 1) {
     return n; // Base case: fib(0) = 0, fib(1) = 1
@@ -100,3 +101,5 @@ function fib(n) {
 }
 
 console.log(fib(1)); // Output: 8
+*/
+
